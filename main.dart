@@ -28,64 +28,66 @@ class ArtProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(vertical: 24),
-          child: Container(
-            // Kích thước chuẩn khung Figma: Width 390px, bo góc 44px, viền 3px #CBD5E1
-            width: 390,
-            decoration: BoxDecoration(
-              color: const Color(0xFFF8FAFC),
-              borderRadius: BorderRadius.circular(44),
-              border: Border.all(
-                color: const Color(0xFFCBD5E1),
-                width: 3,
-              ),
-              boxShadow: const [
-                BoxShadow(
-                  color: Color.fromRGBO(0, 0, 0, 0.08),
-                  blurRadius: 30,
-                  offset: Offset(0, 10),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 24),
+            child: Container(
+              // Kích thước chuẩn khung Figma: Width 390px, bo góc 44px, viền 3px #CBD5E1
+              width: 390,
+              decoration: BoxDecoration(
+                color: const Color(0xFFF8FAFC),
+                borderRadius: BorderRadius.circular(44),
+                border: Border.all(
+                  color: const Color(0xFFCBD5E1),
+                  width: 3,
                 ),
-              ],
-            ),
-            padding: const EdgeInsets.fromLTRB(24, 44, 24, 36),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // 1. TOP BAR: Nút Back, Tiêu đề "Profile", Nút Share
-                _buildTopBar(),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Color.fromRGBO(0, 0, 0, 0.08),
+                    blurRadius: 30,
+                    offset: Offset(0, 10),
+                  ),
+                ],
+              ),
+              padding: const EdgeInsets.fromLTRB(24, 44, 24, 36),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // 1. TOP BAR: Nút Back, Tiêu đề "Profile", Nút Share
+                  _buildTopBar(),
 
-                const SizedBox(height: 24),
+                  const SizedBox(height: 24),
 
-                // 2. PROFILE HEADER (Chủ đề Vẽ hình / Digital Artist)
-                _buildProfileHeader(),
+                  // 2. PROFILE HEADER (Chủ đề Vẽ hình / Digital Artist)
+                  _buildProfileHeader(),
 
-                const SizedBox(height: 24),
+                  const SizedBox(height: 24),
 
-                // 3. STATS CARD (Thống kê: Artworks, Kinh nghiệm, Đánh giá)
-                _buildStatsCard(),
+                  // 3. STATS CARD (Thống kê: Artworks, Kinh nghiệm, Đánh giá)
+                  _buildStatsCard(),
 
-                const SizedBox(height: 24),
+                  const SizedBox(height: 24),
 
-                // 4. ABOUT ME
-                _buildAboutSection(),
+                  // 4. ABOUT ME
+                  _buildAboutSection(),
 
-                const SizedBox(height: 24),
+                  const SizedBox(height: 24),
 
-                // 5. SKILLS & EXPERTISE (Kỹ năng vẽ hình, đồ họa)
-                _buildSkillsSection(),
+                  // 5. SKILLS & EXPERTISE (Kỹ năng vẽ hình, đồ họa)
+                  _buildSkillsSection(),
 
-                const SizedBox(height: 24),
+                  const SizedBox(height: 24),
 
-                // 6. FEATURED PROJECTS (Tác phẩm vẽ nổi bật)
-                _buildFeaturedProjectsSection(),
+                  // 6. FEATURED PROJECTS (Tác phẩm vẽ nổi bật)
+                  _buildFeaturedProjectsSection(),
 
-                const SizedBox(height: 24),
+                  const SizedBox(height: 24),
 
-                // 7. CONTACT INFORMATION
-                _buildContactSection(),
-              ],
+                  // 7. CONTACT INFORMATION
+                  _buildContactSection(),
+                ],
+              ),
             ),
           ),
         ),
